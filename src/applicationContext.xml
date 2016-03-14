@@ -15,13 +15,13 @@
         http://www.springframework.org/schema/tx/spring-tx.xsd">
 	<!-- 注解设置 -->
 	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
-	<context:component-scan base-package="com.ordering.seller"></context:component-scan>
+	<context:component-scan base-package="com.ordering"></context:component-scan>
 	<!-- mvc注解驱动 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
 	
 	<!-- 设置数据库源 -->
 	<bean class="com.mchange.v2.c3p0.ComboPooledDataSource" id="ds">
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/online"></property>
+		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/onlinetest02"></property>
 		<property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 		<property name="user" value="root"></property>
 		<property name="password" value="1234"></property>
@@ -46,7 +46,7 @@
 		
 		<!-- 待扫描的实体类包，不再需要persistence.xml -->
 		
-		<property name="packagesToScan" value="com.ordering.seller" />
+		<property name="packagesToScan" value="com.ordering" />
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.ejb.naming_strategy">org.hibernate.cfg.ImprovedNamingStrategy</prop>

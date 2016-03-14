@@ -121,7 +121,7 @@ public class SellerController {
 		ServletFileUpload sfu = new ServletFileUpload(factory);
 		
 		List<FileItem> fileItemList = sfu.parseRequest(request);
-		//封装fileItemList中的相关的数据到Book对象中
+		//封装fileItemList中的相关的数据到Seller对象中
 		/**
 		 * 先将普通表单字段封装到Map中
 		 * 再把Map中的数据封装到Seller对象中

@@ -1,5 +1,5 @@
 ﻿<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -59,22 +59,22 @@ $(function(){
         <li class="active"><cite></cite><a href="<c:url value='/refreshQueue?sid=${sessionScope.seller.sid }' />" target="rightFrame">刷新审批队列</a><i></i></li>
         </ul>    
     </dd>
+    <dd><div class="title"><span><img src="images/leftico03.png" /></span>店铺信息管理</div>
+    <ul class="menuson">
+    	<li><cite></cite><a href="<c:url value='/showProductsAll?sid=${sessionScope.seller.sid }' />" target="rightFrame">查看当前食品</a><i></i></li>
+    	<li><cite></cite><a href="<c:url value='/preAddProduct'/>" target="rightFrame">添加新的食品</a><i></i></li>
+        <li><cite></cite><a href="#">查看食品分类</a><i></i></li>
+        <li><cite></cite><a href="#">添加食品分类</a><i></i></li>
+    </ul>    
+    </dd>  
     <dd>
     <div class="title">
     <span><img src="images/leftico02.png" /></span>顾客订单管理
     </div>
     <ul class="menuson">
-        <li><cite></cite><a href="#" target="rightFrame">查看顾客订单</a><i></i></li>
+        <li><cite></cite><a href="<c:url value='/refreshQueue?sid=${sessionScope.seller.sid }' />" target="rightFrame">查看顾客订单</a><i></i></li>
         </ul>     
     </dd> 
-    <dd><div class="title"><span><img src="images/leftico03.png" /></span>店铺信息管理</div>
-    <ul class="menuson">
-        <li><cite></cite><a href="#">查看当前店铺</a><i></i></li>
-        <li><cite></cite><a href="#">查看食品分类</a><i></i></li>
-        <li><cite></cite><a href="#">添加食品分类</a><i></i></li>
-        <li><cite></cite><a href="#">所有订单管理</a><i></i></li>
-    </ul>    
-    </dd>  
     </dl>
 </body>
 </html>

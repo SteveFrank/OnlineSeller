@@ -23,5 +23,6 @@
 	<mvc:resources location="/src/" mapping="/src/**"></mvc:resources>
 	<mvc:resources location="/uploadVerify/" mapping="/uploadVerify/**"></mvc:resources>
 	<mvc:resources location="/uploadPerson/" mapping="/uploadPerson/**"></mvc:resources>
-	<mvc:resources location="classpath:" mapping="classpath:*.xml"></mvc:resources>
+	<mvc:resources location="/uploadProduct/" mapping="/uploadProduct/**"></mvc:resources>
+	<mvc:resources location="/product_img/" mapping="/product_img/**"></mvc:resources>
 </beans>
