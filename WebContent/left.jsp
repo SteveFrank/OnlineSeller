@@ -63,7 +63,7 @@ $(function(){
     <ul class="menuson">
     	<li><cite></cite><a href="<c:url value='/showProductsAll?sid=${sessionScope.seller.sid }' />" target="rightFrame">查看当前食品</a><i></i></li>
     	<li><cite></cite><a href="<c:url value='/preAddProduct'/>" target="rightFrame">添加新的食品</a><i></i></li>
-        <li><cite></cite><a href="#">查看食品分类</a><i></i></li>
+        <li><cite></cite><a href="<c:url value='/showCategorysAll'/>" target="rightFrame">查看食品分类</a><i></i></li>
         <li><cite></cite><a href="#">添加食品分类</a><i></i></li>
     </ul>    
     </dd>  

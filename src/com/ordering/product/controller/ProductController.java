@@ -136,6 +136,13 @@ public class ProductController {
 		
 		productService.addProduct(product,sid);
 		
-		return "/showProductsAll?sid="+sid;
+		int PageCurrent = getPageCurrent(request);//获取当前页
+		int PageSize = 4;//获取每页的记录数
+
+		PageBean<Product> pageBean = productService.queryAll_PageProduct(sid, PageCurrent, PageSize);
+		pageBean.setUrl(getUrl(request).replaceFirst("addProduct", "showProductsAll"));
+		request.setAttribute("pb", pageBean);
+		
+		return "/showProductsAll";
 	}
 }

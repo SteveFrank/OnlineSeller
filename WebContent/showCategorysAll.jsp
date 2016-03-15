@@ -69,22 +69,16 @@ $(document).ready(function(){
     
     <thead>
     <tr>
-    <th width="100px;">美食剪影</th>
-    <th>美食名称</th>
-    <th>美食介绍</th>
-    <th>美食价格</th>
-    <th>美食分类</th>
+    <th width="100px;">分类编号</th>
+    <th>分类名称</th>
     </tr>
     </thead>
     
     <tbody>
-    <c:forEach items="${pb.beanList}" var="product">
+    <c:forEach items="${pb.beanList}" var="category">
     	<tr>
-    		<td class="imgtd"><img width="120px" height="100px" src="${product.image}" /></td>
-    		<td><a href="#">${product.pname }</a></td>
-    		<td>${product.describle }</td>
-    		<td>${product.price }</td>
-    		<td>${product.category.cname }</td>
+    		<td><a href="#">${category.cid }</a></td>
+    		<td><a href="#">${category.cname }</a></td>
     	</tr>
     </c:forEach>
     

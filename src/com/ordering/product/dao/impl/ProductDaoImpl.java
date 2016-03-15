@@ -32,12 +32,12 @@ public class ProductDaoImpl implements ProductDao {
 		//设置查询到的中行数
 		pb.setRowCount(productList.size());
 		
+		int _pageSize = ((pageCurrent-1)*pageSize+pageSize);
 		if(((pageCurrent-1)*pageSize+pageSize)>productList.size()) {
-			pageSize = productList.size();
+			_pageSize = pageSize-(((pageCurrent-1)*pageSize+pageSize)-productList.size());
 		}
 		
-		productList.subList((pageCurrent-1)*pageSize, (pageCurrent-1)*pageSize+pageSize);
-		pb.setBeanList(productList);
+		pb.setBeanList(productList.subList((pageCurrent-1)*pageSize, (pageCurrent-1)*pageSize+_pageSize));
 		entityManager.close();
 		return pb;
 	}
